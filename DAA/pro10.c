@@ -1,5 +1,5 @@
 #include <stdio.h> 
-#include<limits.h>
+#include <limits.h> 
 int main() 
 { 
     int p[20], m[20][20]; 
@@ -13,10 +13,14 @@ int main()
     { 
         scanf("%d", &p[i]); 
     } 
+ 
+    // Initialize diagonal elements 
     for (i = 1; i <= n; i++) 
     { 
         m[i][i] = 0; 
     } 
+ 
+    // Matrix Chain Multiplication using DP 
     for (L = 2; L <= n; L++) 
     { 
         for (i = 1; i <= n - L + 1; i++) 
@@ -60,4 +64,4 @@ int main()
     } 
  
     return 0; 
-} 
+}
